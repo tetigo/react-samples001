@@ -13,9 +13,10 @@ function App() {
   }, []);
   msg = "outra msg2";
   const [status, setStatus] = useState(false);
+  const [square3, setSquare3] = useState(false);
   return (
     <div>
-      <Square3 />
+      <Square3 color={square3} />
       <Square2 />
       <Square color="yellow" />
       <p>{status ? "sim" : "não"}</p>
@@ -23,6 +24,7 @@ function App() {
         onClick={() => {
           console.log(status);
           setStatus(!status);
+          setSquare3(!square3);
         }}
       >
         clique
