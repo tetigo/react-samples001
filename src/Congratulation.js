@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // eu prefiro usar diretamente dentro da declaração da função
 // function Congratulation({ name = "Tiago", standing = "1º" }) {
@@ -15,6 +16,11 @@ function Congratulation({ name, standing }) {
 Congratulation.defaultProps = {
   name: "Anônimo",
   standing: "2º"
+};
+
+Congratulation.propTypes = {
+  name: PropTypes.string,
+  standing: PropTypes.string
 };
 
 export default Congratulation;

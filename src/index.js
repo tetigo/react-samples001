@@ -29,7 +29,7 @@ function App() {
   return (
     <div>
       <Congratulation />
-      <Congratulation name="Tiago2" standing="2º" />
+      <Congratulation name="Tiago" standing="1º" />
       <Button3>
         Teste2
         <Icon />
