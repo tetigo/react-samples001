@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Welcome from "./Welcome";
+import { Button } from "./Button";
 
 function App() {
+  const handleClick = e => {
+    console.log(e.target.innerHTML);
+  };
   const [status, setStatus] = useState(false);
   return (
     <div>
@@ -15,6 +19,7 @@ function App() {
       >
         clique
       </button>
+      <Button clicked={e => handleClick(e)} />
     </div>
   );
 }
