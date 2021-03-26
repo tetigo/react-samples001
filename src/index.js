@@ -13,7 +13,7 @@ function App() {
   const [status, setStatus] = useState(false);
   return (
     <div>
-      <Square />
+      <Square color="yellow" />
       <p>{status ? "sim" : "não"}</p>
       <button
         onClick={() => {
