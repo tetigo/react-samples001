@@ -2,16 +2,18 @@ import React, { useState, useCallback } from "react";
 import ReactDOM from "react-dom";
 import Welcome from "./Welcome";
 import { Button } from "./Button";
+import Square from "./Square/Square";
 
 function App() {
   let msg = "mensagem";
-  const handleClick = useCallback(() => {
-    window.alert(msg);
-  }, [msg]);
-  msg = "outra msg";
+  const handleClick = useCallback(txt => {
+    window.alert(txt);
+  }, []);
+  msg = "outra msg2";
   const [status, setStatus] = useState(false);
   return (
     <div>
+      <Square />
       <p>{status ? "sim" : "não"}</p>
       <button
         onClick={() => {
@@ -21,7 +23,7 @@ function App() {
       >
         clique
       </button>
-      <Button clicked={e => handleClick(e)} />
+      <Button clicked={e => handleClick(msg)} />
     </div>
   );
 }
