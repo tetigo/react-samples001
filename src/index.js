@@ -2,6 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 function App() {
-  return <h1>Texto01c</h1>;
+  return <button onClick={e => console.log(e)}>clique</button>;
 }
 ReactDOM.render(<App />, document.getElementById("root"));
