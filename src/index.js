@@ -6,8 +6,13 @@ import Square from "./Square/Square";
 import Square2 from "./Square2/Square2";
 import Square3 from "./Square3/Square3";
 import Counter from "./Counter";
+import Order from "./Order";
 
 function App() {
+  const order = {
+    food: "pizza",
+    flavor: "portuguesa"
+  };
   let msg = "mensagem";
   const handleClick = useCallback(txt => {
     window.alert(txt);
@@ -17,6 +22,7 @@ function App() {
   const [square3, setSquare3] = useState(false);
   return (
     <div>
+      <Order {...order} />
       <Counter start={10} />
       <Square3 color={square3} />
       <Square2 />
