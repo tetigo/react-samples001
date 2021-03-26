@@ -7,6 +7,7 @@ function Square({ color }) {
     width: "50px",
     height: "50px"
   };
+  // className precisa que seu valor seja do tipo string
   return (
     <div>
       <div className="square" />
