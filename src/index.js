@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Welcome from "./Welcome";
 
 function App() {
+  const [status, setStatus] = useState(false);
   return (
     <div>
-      <Welcome gender="male" name="Tiago" />
-      <Welcome gender="female" name="Marta" />
+      <p>{status ? "sim" : "não"}</p>
+      <button
+        onClick={() => {
+          console.log(status);
+          setStatus(!status);
+        }}
+      >
+        clique
+      </button>
     </div>
   );
 }
