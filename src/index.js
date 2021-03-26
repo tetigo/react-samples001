@@ -5,6 +5,7 @@ import { Button } from "./Button";
 import Square from "./Square/Square";
 import Square2 from "./Square2/Square2";
 import Square3 from "./Square3/Square3";
+import Counter from "./Counter";
 
 function App() {
   let msg = "mensagem";
@@ -16,6 +17,7 @@ function App() {
   const [square3, setSquare3] = useState(false);
   return (
     <div>
+      <Counter />
       <Square3 color={square3} />
       <Square2 />
       <Square color="yellow" />
