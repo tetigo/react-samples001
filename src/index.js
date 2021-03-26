@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import ReactDOM from "react-dom";
 import Welcome from "./Welcome";
 import { Button } from "./Button";
 
 function App() {
-  const handleClick = e => {
-    console.log(e.target.innerHTML);
-  };
+  let msg = "mensagem";
+  const handleClick = useCallback(() => {
+    window.alert(msg);
+  }, [msg]);
+  msg = "outra msg";
   const [status, setStatus] = useState(false);
   return (
     <div>
