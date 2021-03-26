@@ -10,6 +10,7 @@ import Square3 from "./Square3/Square3";
 import Counter from "./Counter";
 import Order from "./Order";
 import Icon from "./Icon";
+import Congratulation from "./Congratulation";
 
 function App() {
   const order = {
@@ -27,6 +28,8 @@ function App() {
   // passando component como children em Button3
   return (
     <div>
+      <Congratulation />
+      <Congratulation name="Tiago2" standing="2º" />
       <Button3>
         Teste2
         <Icon />
