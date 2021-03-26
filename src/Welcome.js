@@ -1,11 +1,11 @@
 import React from "react";
 
-function Welcome(props) {
-  switch (props.gender) {
+function Welcome({ gender, name }) {
+  switch (gender) {
     case "male":
-      return <h2>Bem vindo {props.name}</h2>;
+      return <h2>Bem vindo {name}</h2>;
     case "female":
-      return <h2> Bem vinda {props.name}</h2>;
+      return <h2> Bem vinda {name}</h2>;
     default:
       return <h2>Bem vindo</h2>;
   }

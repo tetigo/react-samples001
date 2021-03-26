@@ -6,6 +6,7 @@ function App() {
   return (
     <div>
       <Welcome gender="male" name="Tiago" />
+      <Welcome gender="female" name="Marta" />
     </div>
   );
 }
