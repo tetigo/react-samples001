@@ -17,7 +17,7 @@ function App() {
   const [square3, setSquare3] = useState(false);
   return (
     <div>
-      <Counter />
+      <Counter start={10} />
       <Square3 color={square3} />
       <Square2 />
       <Square color="yellow" />
