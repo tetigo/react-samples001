@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Welcome from "./Welcome";
 import { Button } from "./Button";
 import Button2 from "./Button2";
+import Button3 from "./Button3";
 import Square from "./Square/Square";
 import Square2 from "./Square2/Square2";
 import Square3 from "./Square3/Square3";
@@ -22,10 +23,17 @@ function App() {
   msg = "outra msg2";
   const [status, setStatus] = useState(false);
   const [square3, setSquare3] = useState(false);
-  // passando component como props em Button2
+  // passando component como props em Button2 precisa ser tag html
+  // passando component como children em Button3
   return (
     <div>
+      <Button3>
+        Teste2
+        <Icon />
+      </Button3>
+
       <Button2 icon={<Icon />} title="Teste" />
+
       <Order {...order} />
       <Counter start={10} />
       <Square3 color={square3} />
